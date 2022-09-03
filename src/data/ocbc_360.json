@@ -1,0 +1,371 @@
+{
+  "id": "ocbc_360",
+  "name": "OCBC 360 Account",
+  "metadata": {
+    "individual_requirement": true,
+    "base_interests": [
+      {
+        "min_balance": 0,
+        "max_balance": 999999999.99,
+        "rate_pa": 0.05
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "salary",
+      "category": "salary",
+      "label": "Salary",
+      "description": "Credit your salary of at least S$1,800 throught GIRO.",
+      "conditions": [
+        "Credit your salary of at least S$1,800 into the 360 Account.",
+        "Only salary credit through GIRO with the transaction description 'GIRO - SALARY' in your statements will qualify for this bonus.",
+        "To set up your 360 Account as your salary crediting account, please inform your HR department of your new account number (you will only need to do it once)."
+      ],
+      "min_amount": 1800,
+      "max_amount": 999999999.99,
+      "min_count": 0,
+      "max_count": 1,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.6
+        },
+        {
+          "min_balance": 50000.01,
+          "max_balance": 75000,
+          "rate_pa": 1.2
+        },
+        {
+          "min_balance": 75000.01,
+          "max_balance": 100000,
+          "rate_pa": 2.0
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "category": "save",
+      "label": "Save",
+      "description": "Increase your average daily balance by at least S$500 monthly.",
+      "conditions": [
+        "Increase your account's average daily balance in the current month by at least S$500 from the previous month's average daily balance."
+      ],
+      "min_amount": 500,
+      "max_amount": 999999999.99,
+      "min_count": 0,
+      "max_count": 1,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.2
+        },
+        {
+          "min_balance": 50000.01,
+          "max_balance": 75000,
+          "rate_pa": 0.4
+        },
+        {
+          "min_balance": 75000.01,
+          "max_balance": 100000,
+          "rate_pa": 0.6
+        }
+      ]
+    },
+    {
+      "id": "spend",
+      "category": "spend",
+      "label": "Spend",
+      "description": "Charge at least S$500 to your OCBC 365 Credit Card each month.",
+      "conditions": [
+        "Charge at least S$500 to your OCBC 365 Credit Card each month."
+      ],
+      "min_amount": 500,
+      "max_amount": 999999999.99,
+      "min_count": 0,
+      "max_count": 1,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.2
+        },
+        {
+          "min_balance": 50000.01,
+          "max_balance": 75000,
+          "rate_pa": 0.4
+        },
+        {
+          "min_balance": 75000.01,
+          "max_balance": 100000,
+          "rate_pa": 0.6
+        }
+      ]
+    },
+    {
+      "id": "insure_protect",
+      "category": "insure",
+      "label": "Insure",
+      "description": "Purchase an eligible insurance product from OCBC.",
+      "conditions": [
+        "Eligible products: Regular Premium: Protection/Legacy.",
+        "Minimum qualifying amount: S$2,000",
+        "For Regular Premium Insurance Categories, the minimum qualifying amount refers to the annual premium of the policy. Qualifying amount is taken after prepayment discount (if any).",
+        "You need to be the primary account holder of the 360 Account as well as the policyowner of the eligible insurance product.",
+        "Purchases of the same financial product will be aggregated, if their effective date post free-look period or 14 days whichever is longer, falls in the same calendar month.",
+        "This bonus interest is accorded for 12 months after the effective date of purchase, post the free look/cancellation period or 14 days, whichever is longer."
+      ],
+      "min_amount": 2000,
+      "max_amount": 999999999.99,
+      "min_count": 0,
+      "max_count": 1,
+      "applicable_months": 12,
+      "replaceable_by": [
+        "insure_retire",
+        "insure_single"
+      ],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.6
+        },
+        {
+          "min_balance": 50000.01,
+          "max_balance": 75000,
+          "rate_pa": 1.2
+        },
+        {
+          "min_balance": 75000.01,
+          "max_balance": 100000,
+          "rate_pa": 2.0
+        }
+      ]
+    },
+    {
+      "id": "insure_retire",
+      "category": "insure",
+      "label": "Insure",
+      "description": "Purchase an eligible insurance product from OCBC.",
+      "conditions": [
+        "Eligible products: Regular Premium: Endowment/Retirement.",
+        "Minimum qualifying amount: S$4,000",
+        "For Regular Premium Insurance Categories, the minimum qualifying amount refers to the annual premium of the policy. Qualifying amount is taken after prepayment discount (if any).",
+        "You need to be the primary account holder of the 360 Account as well as the policyowner of the eligible insurance product.",
+        "Purchases of the same financial product will be aggregated, if their effective date post free-look period or 14 days whichever is longer, falls in the same calendar month.",
+        "This bonus interest is accorded for 12 months after the effective date of purchase, post the free look/cancellation period or 14 days, whichever is longer."
+      ],
+      "min_amount": 4000,
+      "max_amount": 999999999.99,
+      "min_count": 0,
+      "max_count": 1,
+      "applicable_months": 12,
+      "replaceable_by": [
+        "insure_protect",
+        "insure_single"
+      ],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.6
+        },
+        {
+          "min_balance": 50000.01,
+          "max_balance": 75000,
+          "rate_pa": 1.2
+        },
+        {
+          "min_balance": 75000.01,
+          "max_balance": 100000,
+          "rate_pa": 2.0
+        }
+      ]
+    },
+    {
+      "id": "insure_single",
+      "category": "insure",
+      "label": "Insure",
+      "description": "Purchase an eligible insurance product from OCBC.",
+      "conditions": [
+        "Eligible products: Single Premium Insurance.",
+        "Minimum qualifying amount: S$20,000",
+        "For Regular Premium Insurance Categories, the minimum qualifying amount refers to the annual premium of the policy. Qualifying amount is taken after prepayment discount (if any).",
+        "You need to be the primary account holder of the 360 Account as well as the policyowner of the eligible insurance product.",
+        "Purchases of the same financial product will be aggregated, if their effective date post free-look period or 14 days whichever is longer, falls in the same calendar month.",
+        "This bonus interest is accorded for 12 months after the effective date of purchase, post the free look/cancellation period or 14 days, whichever is longer."
+      ],
+      "min_amount": 20000,
+      "max_amount": 999999999.99,
+      "min_count": 0,
+      "max_count": 1,
+      "applicable_months": 12,
+      "replaceable_by": [
+        "insure_protect",
+        "insure_retire"
+      ],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.6
+        },
+        {
+          "min_balance": 50000.01,
+          "max_balance": 75000,
+          "rate_pa": 1.2
+        },
+        {
+          "min_balance": 75000.01,
+          "max_balance": 100000,
+          "rate_pa": 2.0
+        }
+      ]
+    },
+    {
+      "id": "invest_unit_trusts",
+      "category": "invest",
+      "label": "Invest",
+      "description": "Purchase an eligible investment product from OCBC.",
+      "conditions": [
+        "Eligible products: Unit Trusts. Exclude Unit Trusts investments into money market funds, Systematic Investment Programme (OCBC Momentum) and Unit Trusts transferred in from other financial institutions.",
+        "Minimum qualifying amount: S$20,000.",
+        "You need to be the primary account holder of the 360 Account as well as the single name account holder of the eligible investment product.",
+        "Purchases of the same financial product will be aggregated, if their effective date post free-look period or 14 days whichever is longer, falls in the same calendar month.",
+        "This bonus interest is accorded for 12 months after the effective date of purchase, post the free look/cancellation period or 14 days, whichever is longer."
+      ],
+      "min_amount": 2000,
+      "max_amount": 999999999.99,
+      "min_count": 0,
+      "max_count": 1,
+      "applicable_months": 12,
+      "replaceable_by": [
+        "invest_structured_deposits",
+        "insure_bonds"
+      ],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.6
+        },
+        {
+          "min_balance": 50000.01,
+          "max_balance": 75000,
+          "rate_pa": 1.2
+        },
+        {
+          "min_balance": 75000.01,
+          "max_balance": 100000,
+          "rate_pa": 2.0
+        }
+      ]
+    },
+    {
+      "id": "invest_structured_deposits",
+      "category": "invest",
+      "label": "Invest",
+      "description": "Purchase an eligible investment product from OCBC.",
+      "conditions": [
+        "Eligible products: Structured Deposits.",
+        "Minimum qualifying amount: S$20,000.",
+        "You need to be the primary account holder of the 360 Account as well as the single name account holder of the eligible investment product.",
+        "Purchases of the same financial product will be aggregated, if their effective date post free-look period or 14 days whichever is longer, falls in the same calendar month.",
+        "This bonus interest is accorded for 12 months after the effective date of purchase, post the free look/cancellation period or 14 days, whichever is longer."
+      ],
+      "min_amount": 2000,
+      "max_amount": 999999999.99,
+      "min_count": 0,
+      "max_count": 1,
+      "applicable_months": 12,
+      "replaceable_by": [
+        "invest_unit_trusts",
+        "insure_bonds"
+      ],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.6
+        },
+        {
+          "min_balance": 50000.01,
+          "max_balance": 75000,
+          "rate_pa": 1.2
+        },
+        {
+          "min_balance": 75000.01,
+          "max_balance": 100000,
+          "rate_pa": 2.0
+        }
+      ]
+    },
+    {
+      "id": "invest_bonds",
+      "category": "invest",
+      "label": "Invest",
+      "description": "Purchase an eligible investment product from OCBC.",
+      "conditions": [
+        "Eligible products: Bonds and structured products.",
+        "Minimum qualifying amount: S$200,000.",
+        "You need to be the primary account holder of the 360 Account as well as the single name account holder of the eligible investment product.",
+        "Purchases of the same financial product will be aggregated, if their effective date post free-look period or 14 days whichever is longer, falls in the same calendar month.",
+        "This bonus interest is accorded for 12 months after the effective date of purchase, post the free look/cancellation period or 14 days, whichever is longer."
+      ],
+      "min_amount": 2000,
+      "max_amount": 999999999.99,
+      "min_count": 0,
+      "max_count": 1,
+      "applicable_months": 12,
+      "replaceable_by": [
+        "invest_unit_trusts",
+        "invest_structured_deposits"
+      ],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.6
+        },
+        {
+          "min_balance": 50000.01,
+          "max_balance": 75000,
+          "rate_pa": 1.2
+        },
+        {
+          "min_balance": 75000.01,
+          "max_balance": 100000,
+          "rate_pa": 2.0
+        }
+      ]
+    },
+    {
+      "id": "grow",
+      "category": "grow",
+      "label": "Grow",
+      "description": "Maintain an average daily balance of at least S$200,000.",
+      "conditions": [],
+      "min_amount": 200000,
+      "max_amount": 999999999.99,
+      "min_count": 0,
+      "max_count": 1,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 100000,
+          "rate_pa": 0.6
+        }
+      ]
+    }
+  ]
+}
