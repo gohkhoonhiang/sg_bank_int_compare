@@ -1,0 +1,232 @@
+{
+  "id": "uob_one",
+  "name": "UOB One Account",
+  "metadata": {
+    "individual_requirement": false,
+    "base_interests": [
+      {
+        "min_balance": 0,
+        "max_balance": 999999999.99,
+        "rate_pa": 0.05
+      }
+    ]
+  },
+  "cumulative_requirements": [
+    {
+      "id": "spend",
+      "category": "spend",
+      "required_categories": [
+        "spend"
+      ],
+      "label": "Spend",
+      "description": "Spend min. S$500 (calendar month) on eligible UOB Card",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 1,
+      "max_count": 3,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 15000,
+          "rate_pa": 0.2
+        },
+        {
+          "min_balance": 15000.01,
+          "max_balance": 30000,
+          "rate_pa": 0.2
+        },
+        {
+          "min_balance": 30000.01,
+          "max_balance": 45000,
+          "rate_pa": 0.2
+        },
+        {
+          "min_balance": 45000.01,
+          "max_balance": 60000,
+          "rate_pa": 0.2
+        },
+        {
+          "min_balance": 60000.01,
+          "max_balance": 75000,
+          "rate_pa": 0.2
+        },
+        {
+          "min_balance": 75000.01,
+          "max_balance": 100000,
+          "rate_pa": 0.0
+        },
+        {
+          "min_balance": 100000.01,
+          "max_balance": 999999999.99,
+          "rate_pa": 0.0
+        }
+      ]
+    },
+    {
+      "id": "spend_and_giro",
+      "category": "spend",
+      "required_categories": [
+        "spend",
+        "bills"
+      ],
+      "label": "Spend",
+      "description": "Spend min. S$500 (calendar month) on eligible UOB Card AND make 3 GIRO debit transactions",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 2,
+      "max_count": 3,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 15000,
+          "rate_pa": 0.7
+        },
+        {
+          "min_balance": 15000.01,
+          "max_balance": 30000,
+          "rate_pa": 0.75
+        },
+        {
+          "min_balance": 30000.01,
+          "max_balance": 45000,
+          "rate_pa": 0.8
+        },
+        {
+          "min_balance": 45000.01,
+          "max_balance": 60000,
+          "rate_pa": 0.85
+        },
+        {
+          "min_balance": 60000.01,
+          "max_balance": 75000,
+          "rate_pa": 2.45
+        },
+        {
+          "min_balance": 75000.01,
+          "max_balance": 100000,
+          "rate_pa": 0.0
+        },
+        {
+          "min_balance": 100000.01,
+          "max_balance": 999999999.99,
+          "rate_pa": 0.0
+        }
+      ]
+    },
+    {
+      "id": "spend_and_salary",
+      "category": "spend",
+      "required_categories": [
+        "spend",
+        "salary"
+      ],
+      "label": "Spend",
+      "description": "Spend min. S$500 (calendar month) on eligible UOB Card AND credit your salary via GIRO",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 2,
+      "max_count": 3,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 15000,
+          "rate_pa": 1.35
+        },
+        {
+          "min_balance": 15000.01,
+          "max_balance": 30000,
+          "rate_pa": 1.35
+        },
+        {
+          "min_balance": 30000.01,
+          "max_balance": 45000,
+          "rate_pa": 1.45
+        },
+        {
+          "min_balance": 45000.01,
+          "max_balance": 60000,
+          "rate_pa": 1.45
+        },
+        {
+          "min_balance": 60000.01,
+          "max_balance": 75000,
+          "rate_pa": 2.45
+        },
+        {
+          "min_balance": 75000.01,
+          "max_balance": 100000,
+          "rate_pa": 3.55
+        },
+        {
+          "min_balance": 100000.01,
+          "max_balance": 999999999.99,
+          "rate_pa": 0.0
+        }
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "id": "salary",
+      "category": "salary",
+      "label": "Salary",
+      "description": "Credit min. salary of S$1,600 monthly into your UOB One Account.",
+      "conditions": [
+        "Eligible salary credit transactions are made through GIRO with the transaction reference 'SALA'",
+        "and successfully credited within the CALENDAR Month."
+      ],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 1,
+      "max_count": 1,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": []
+    },
+    {
+      "id": "spend",
+      "category": "spend",
+      "label": "Spend",
+      "description": "Spend min. S$500 monthly on an eligible UOB credit/debit card",
+      "conditions": [
+        "Eligible Visa/MasterCard local and foreign retail transactions subjected to the exclusions mentioned below;",
+        "Insurance payments made on a recurring basis on selected credit or debit cards",
+        "Total posted retail transactions by the selected Credit Card(s) principal and supplementary holder plus any spending on the selected Debit card(s); and",
+        "Transactions posted within a CALENDAR month"
+      ],
+      "min_amount": 500,
+      "max_amount": 999999999.99,
+      "min_count": 1,
+      "max_count": 1,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": []
+    },
+    {
+      "id": "giro",
+      "category": "bills",
+      "label": "GIRO",
+      "description": "Make 3 GIRO debit transactions per month",
+      "conditions": [
+        "You need to make a min. of 3 GIRO debit transactions payable to any Billing Organisations with the bank. Eligible transactions must be posted within the calendar month.",
+        "GIRO transactions are dependent on Billing Organisations and deduction dates are determined by the Billing Organisations. For payments that are due at month end or beginning of the month, there is a risk that the deduction will flow to next month or be brought forward."
+      ],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 3,
+      "max_count": 99,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": []
+    }
+  ]
+}
