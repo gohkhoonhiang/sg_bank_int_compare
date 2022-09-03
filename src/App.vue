@@ -8,6 +8,7 @@
       <v-main>
 
         <v-container>
+          <CalculatorForm/>
         </v-container>
 
       </v-main>
@@ -16,10 +17,13 @@
 </template>
 
 <script>
+import CalculatorForm from './components/CalculatorForm';
+
 export default {
   name: 'App',
 
   components: {
+    CalculatorForm
   },
 
   created() {
