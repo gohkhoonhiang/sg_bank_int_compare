@@ -8,6 +8,7 @@
         ref="form"
         v-model="valid"
         lazy-validation
+        :disabled="disabled"
       >
 
         <v-alert
@@ -203,6 +204,7 @@
         </v-container>
 
         <v-btn
+          :disabled="disabled"
           class="ma-1"
           @click="calculate"
         >
@@ -210,6 +212,7 @@
         </v-btn>
 
         <v-btn
+          :disabled="disabled"
           class="ma-1"
           @click="reset"
         >
@@ -369,7 +372,15 @@ const DATA_SOURCES = [
 export default {
   name: 'CalculatorForm',
 
+  model: {
+    prop: 'disabled',
+    event: 'input'
+  },
+
   props: {
+    disabled: {
+      default: false
+    }
   },
 
   mixins: [

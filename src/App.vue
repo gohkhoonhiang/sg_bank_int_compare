@@ -7,11 +7,80 @@
 
       <v-main>
 
-        <v-container>
-          <CalculatorForm/>
+        <v-container
+          fluid
+        >
+          <calculator-form v-model="disclaimer"></calculator-form>
+
         </v-container>
 
+        <v-snackbar
+          v-model="disclaimer"
+          timeout="-1"
+          min-width="1000"
+          color="red"
+          multi-line
+          centered
+        >
+          <p><strong>Disclaimer:</strong> This site does not provide financial advice nor does it endorse any of the financial institutions referenced. The interests calculation is only an approximation and may not be 100% accurate. Please always refer to the official website for calculation. Comparison for reference only and should not be used as the sole reason for making certain financial decisions. The owner of this site shall not be responsible for any financial loss of its users.</p>
+          <p>The interest rates are correct as of 2022-09-04.</p>
+
+          <template v-slot:action="{ attrs }">
+            <v-btn
+              color="black"
+              text
+              v-bind="attrs"
+              @click="disclaimer = false"
+            >
+              I understand
+            </v-btn>
+          </template>
+        </v-snackbar>
+
       </v-main>
+
+      <v-footer
+        app
+        dark
+        padless
+        fixed
+      >
+        <v-card
+          flat
+          tile
+          width="100%"
+          class="pa-1 teal lighten-1 white--text text-center"
+        >
+          <v-card-text
+            class="pa-1 white--text"
+          >
+            {{ new Date().getFullYear() }} — <strong>SG Bank Interests Compare</strong>
+            <v-btn
+              v-for="icon in icons"
+              :key="icon.icon"
+              class="ma-0 white--text"
+              icon
+              @click="openLink(icon.url)"
+            >
+              <v-tooltip
+                right
+              >
+                <template v-slot:activator="{ on, attrs }">
+                  <v-icon
+                    size="20px"
+                    v-bind="attrs"
+                    v-on="on"
+                  >
+                    {{ icon.icon }}
+                  </v-icon>
+                </template>
+                <span>{{ icon.tooltip }}</span>
+              </v-tooltip>
+            </v-btn>
+          </v-card-text>
+        </v-card>
+      </v-footer>
+
     </v-app>
   </div>
 </template>
@@ -30,12 +99,23 @@ export default {
   },
 
   data: () => ({
+    disclaimer: true,
+    icons: [
+      {
+        icon: 'mdi-alert',
+        tooltip: 'Report Issues',
+        url: 'https://github.com/gohkhoonhiang/sg_bank_int_compare/issues'
+      }
+    ]
   }),
 
   computed: {
   },
 
   methods: {
+    openLink: function(url) {
+      window.open(url);
+    }
   },
 
   watch: {
