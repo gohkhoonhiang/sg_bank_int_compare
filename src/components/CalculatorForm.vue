@@ -195,34 +195,35 @@
               cols="12"
               md="4"
             >
-              <v-text-field
-                v-model="form_data.bills.count"
-                label="Bills"
-                type="number"
-                :rules="rules.bills"
-                @keydown="validateNumericField"
-                prefix="#"
-                hint="Number of recurring bills via GIRO"
-                persistent-hint
-                clearable
+              <v-btn
+                class="ma-1"
+                @click="addBill"
               >
-              </v-text-field>
+                Add Bill
+              </v-btn>
             </v-col>
+          </v-row>
 
+          <v-row
+            v-for="(bill, index) in bills_data"
+            :key="index"
+          >
             <v-col
               cols="12"
               md="4"
             >
               <v-text-field
-                v-model="form_data.bills.amount"
+                v-model="bill.amount"
                 label="Bills"
                 type="number"
                 :rules="rules.bills"
                 @keydown="validateNumericField"
                 prefix="S$"
-                hint="Amount for each recurring bill via GIRO"
+                :hint="`Amount for bill ${index + 1}`"
                 persistent-hint
                 clearable
+                append-outer-icon="mdi-delete"
+                @click:append-outer="removeBill(bill)"
               >
               </v-text-field>
             </v-col>
@@ -387,12 +388,12 @@ import calculator from '../scripts/calculator';
 const axios = require('axios').default;
 
 const DATA_SOURCES = [
-  'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/59947ffccb2df3985bb44f091d56cd83807dbcd4/src/data/ocbc_360.json',
-  'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/dd3464f5b1fbb2683f525ea4b84dc64d3037dd56/src/data/dbs_multiplier.json',
-  'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/855de831360070f0a744d1fa966c93f495fd5615/src/data/uob_one.json',
-  'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/fba0bd77471311c1fa46254fc56e97519280f7bc/src/data/cimb_fast_saver.json',
-  'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/f985a93a489beff78a2c2cfb9c0e736ded4b9c78/src/data/sc_bonus_saver.json',
-  'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/6d0bf4fc4f62631ad4db3f36cd67b020e52cbfc8/src/data/maybank_saveup.json'
+  'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/a810e500cce51fd52323c31350e6a80695b3f231/src/data/ocbc_360.json',
+  'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/84be4a6e823857e12fc069274f08e8e3057d543a/src/data/dbs_multiplier.json',
+  'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/b425117e0a73377de70cce9e90fc7c3d2269a236/src/data/uob_one.json',
+  'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/c2c28c98a85f87b6407acd164c2c050e0229626d/src/data/cimb_fast_saver.json',
+  'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/0859e7a55c828505837c68e764a83a361b5d54c5/src/data/sc_bonus_saver.json',
+  'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/123777dd45f53bfb15eb9e6ed1a9c075e2f68dc9/src/data/maybank_saveup.json'
 ];
 
 export default {
@@ -481,6 +482,9 @@ export default {
       bills: null
     },
 
+    bills_data: [],
+    bills_counter: 0,
+
     form_data: {
       banks_to_compare: [],
       starting_balance: null,
@@ -543,17 +547,60 @@ export default {
       })
     },
 
-    formatFormData: function(data) {
-      let starting_balance = parseFloat(data.starting_balance);
-      let banks_to_compare = data.banks_to_compare;
-      let bonus_data = Object.assign({}, data, {
-        grow: {
-          amount: starting_balance,
-          count: null
-        }
+    addBill: function() {
+      let vm = this;
+
+      vm.bills_counter = vm.bills_counter + 1;
+      vm.bills_data.push({
+        id: `bill-${vm.bills_counter}`,
+        amount: null
       });
-      delete bonus_data.starting_balance;
-      delete bonus_data.banks_to_compare;
+    },
+
+    removeBill: function(bill) {
+      let vm = this;
+
+      let index = vm.bills_data.findIndex(b => {
+        return b.id === bill.id;
+      });
+
+      vm.bills_data.splice(index, 1);
+    },
+
+    formatFormData: function() {
+      let vm = this;
+
+      let starting_balance = parseFloat(vm.form_data.starting_balance);
+      let banks_to_compare = vm.form_data.banks_to_compare;
+
+      let bonus_data = {
+        salary: [{
+          amount: vm.form_data.salary.amount
+        }],
+        save: [{
+          amount: vm.form_data.save.amount
+        }],
+        bills: vm.bills_data.map(bill => {
+          return {
+            amount: bill.amount
+          }
+        }),
+        spend: [{
+          amount: vm.form_data.spend.amount
+        }],
+        insure: [{
+          amount: vm.form_data.insure.amount
+        }],
+        invest: [{
+          amount: vm.form_data.invest.amount
+        }],
+        grow: [{
+          amount: starting_balance
+        }],
+        loan: [{
+          amount: vm.form_data.loan.amount
+        }],
+      };
 
       return {
         banks_to_compare: banks_to_compare,
@@ -583,7 +630,7 @@ export default {
 
       if (!vm.valid) { return; }
 
-      let form_data = vm.formatFormData(vm.form_data);
+      let form_data = vm.formatFormData();
       let banks_to_compare = form_data.banks_to_compare;
       let starting_balance = form_data.starting_balance;
       let bonus_data = form_data.bonus_data;
@@ -620,6 +667,8 @@ export default {
         bills: null
       };
 
+      vm.bills_data = [];
+      vm.bills_counter = 0;
       vm.form_data = {
         banks_to_compare: vm.requirements.map(bank => bank.id),
         starting_balance: null,

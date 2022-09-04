@@ -56,23 +56,40 @@ export default {
     },
 
     filter_satisfied_requirements: function(requirements, bonus_data, category) {
-      let category_amount = bonus_data[category].amount ? parseFloat(bonus_data[category].amount) : 0;
-      let category_count = bonus_data[category].count ? parseFloat(bonus_data[category].count) : 0;
+      let category_data = bonus_data[category];
+      let category_count = category_data.length;
+      let category_amount = category_data.reduce((total, data) => {
+        if (data.amount) {
+          return total + parseFloat(data.amount);
+        } else {
+          return total;
+        }
+      }, 0);
 
-      if (category_count && !bonus_data[category].amount) {
-        category_amount = 0.01;
-      }
+      let category_requirements = requirements.filter(requirement => {
+        return requirement.category === category;
+      });
 
-      if (category_amount && !bonus_data[category].count) {
-        category_count = 1;
-      }
+      let potential_requirements = category_requirements.reduce((hash, requirement) => {
+        hash[requirement.id] = 0;
+        return hash;
+      }, {});
 
-      let satisfied_requirements = requirements.filter(requirement => {
-        return requirement.category === category &&
-          category_amount >= requirement.min_amount &&
-          category_amount <= requirement.max_amount &&
-          category_count >= requirement.min_count &&
-          category_count <= requirement.max_count;
+      category_data.forEach(data => {
+        let category_amount = data.amount ? parseFloat(data.amount) : 0;
+
+        category_requirements.forEach(requirement => {
+          if (category_amount >= requirement.min_amount &&
+              category_amount <= requirement.max_amount) {
+            potential_requirements[requirement.id] += 1;
+          }
+        });
+      });
+
+      let satisfied_requirements = category_requirements.filter(requirement => {
+        let count = potential_requirements[requirement.id];
+        return count >= requirement.min_count && count <= requirement.max_count &&
+          category_amount >= requirement.cumulative_min_amount && category_amount <= requirement.cumulative_max_amount;
       });
 
       return {
