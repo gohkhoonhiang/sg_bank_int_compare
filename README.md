@@ -1,4 +1,4 @@
-# cookbook
+# SG Bank Interest Compare App
 
 ## Project setup
 ```
