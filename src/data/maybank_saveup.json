@@ -1,0 +1,1088 @@
+{
+  "id": "maybank_saveup",
+  "name": "Maybank SaveUp Account",
+  "metadata": {
+    "individual_requirement": false,
+    "base_interests": [
+      {
+        "min_balance": 0,
+        "max_balance": 3000,
+        "rate_pa": 0.15
+      },
+      {
+        "min_balance": 3000.01,
+        "max_balance": 50000,
+        "rate_pa": 0.25
+      },
+      {
+        "min_balance": 50000.01,
+        "max_balance": 999999999.99,
+        "rate_pa": 0.25
+      }
+    ]
+  },
+  "cumulative_requirements": [
+    {
+      "id": "salary",
+      "category": "salary",
+      "required_categories": [
+        "salary"
+      ],
+      "label": "Salary",
+      "description": "1 product or service (Salary)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 1,
+      "max_count": 1,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.1
+        }
+      ]
+    },
+    {
+      "id": "bills",
+      "category": "bills",
+      "required_categories": [
+        "bills"
+      ],
+      "label": "GIRO",
+      "description": "1 product or service (GIRO)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 1,
+      "max_count": 1,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.1
+        }
+      ]
+    },
+    {
+      "id": "invest",
+      "category": "invest",
+      "required_categories": [
+        "invest"
+      ],
+      "label": "Invest",
+      "description": "1 product or service (Invest)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 1,
+      "max_count": 1,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.1
+        }
+      ]
+    },
+    {
+      "id": "insure",
+      "category": "insure",
+      "required_categories": [
+        "insure"
+      ],
+      "label": "Insure",
+      "description": "1 product or service (Insure)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 1,
+      "max_count": 1,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.1
+        }
+      ]
+    },
+    {
+      "id": "spend",
+      "category": "spend",
+      "required_categories": [
+        "spend"
+      ],
+      "label": "Spend",
+      "description": "1 product or service (Spend)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 1,
+      "max_count": 1,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.1
+        }
+      ]
+    },
+    {
+      "id": "loan",
+      "category": "loan",
+      "required_categories": [
+        "loan"
+      ],
+      "label": "Loan",
+      "description": "1 product or service (Loan)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 1,
+      "max_count": 1,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.1
+        }
+      ]
+    },
+    {
+      "id": "bills_invest",
+      "category": "bills",
+      "required_categories": [
+        "bills",
+        "invest"
+      ],
+      "label": "GIRO",
+      "description": "2 products or services (GIRO and Invest)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 2,
+      "max_count": 2,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.7
+        }
+      ]
+    },
+    {
+      "id": "bills_insure",
+      "category": "bills",
+      "required_categories": [
+        "bills",
+        "insure"
+      ],
+      "label": "GIRO",
+      "description": "2 products or services (GIRO and Insure)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 2,
+      "max_count": 2,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.7
+        }
+      ]
+    },
+    {
+      "id": "bills_loan",
+      "category": "bills",
+      "required_categories": [
+        "bills",
+        "loan"
+      ],
+      "label": "GIRO",
+      "description": "2 products or services (GIRO and Loan)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 2,
+      "max_count": 2,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.7
+        }
+      ]
+    },
+    {
+      "id": "bills_spend",
+      "category": "bills",
+      "required_categories": [
+        "bills",
+        "spend"
+      ],
+      "label": "GIRO",
+      "description": "2 products or services (GIRO and Spend)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 2,
+      "max_count": 2,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.7
+        }
+      ]
+    },
+    {
+      "id": "salary_invest",
+      "category": "salary",
+      "required_categories": [
+        "salary",
+        "invest"
+      ],
+      "label": "Salary",
+      "description": "2 products or services (Salary and Invest)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 2,
+      "max_count": 2,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.7
+        }
+      ]
+    },
+    {
+      "id": "salary_insure",
+      "category": "salary",
+      "required_categories": [
+        "salary",
+        "insure"
+      ],
+      "label": "Salary",
+      "description": "2 products or services (Salary and Insure)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 2,
+      "max_count": 2,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.7
+        }
+      ]
+    },
+    {
+      "id": "salary_loan",
+      "category": "salary",
+      "required_categories": [
+        "salary",
+        "loan"
+      ],
+      "label": "Salary",
+      "description": "2 products or services (Salary and Loan)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 2,
+      "max_count": 2,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.7
+        }
+      ]
+    },
+    {
+      "id": "salary_spend",
+      "category": "salary",
+      "required_categories": [
+        "salary",
+        "spend"
+      ],
+      "label": "Salary",
+      "description": "2 products or services (Salary and Spend)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 2,
+      "max_count": 2,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.7
+        }
+      ]
+    },
+    {
+      "id": "insure_invest",
+      "category": "insure",
+      "required_categories": [
+        "insure",
+        "invest"
+      ],
+      "label": "Insure",
+      "description": "2 products or services (Insure and Invest)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 2,
+      "max_count": 2,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.7
+        }
+      ]
+    },
+    {
+      "id": "insure_loan",
+      "category": "insure",
+      "required_categories": [
+        "insure",
+        "loan"
+      ],
+      "label": "Insure",
+      "description": "2 products or services (Insure and Loan)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 2,
+      "max_count": 2,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.7
+        }
+      ]
+    },
+    {
+      "id": "insure_spend",
+      "category": "insure",
+      "required_categories": [
+        "insure",
+        "spend"
+      ],
+      "label": "Insure",
+      "description": "2 products or services (Insure and Spend)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 2,
+      "max_count": 2,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.7
+        }
+      ]
+    },
+    {
+      "id": "invest_loan",
+      "category": "invest",
+      "required_categories": [
+        "invest",
+        "loan"
+      ],
+      "label": "Invest",
+      "description": "2 products or services (Invest and Loan)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 2,
+      "max_count": 2,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.7
+        }
+      ]
+    },
+    {
+      "id": "invest_spend",
+      "category": "invest",
+      "required_categories": [
+        "invest",
+        "spend"
+      ],
+      "label": "Invest",
+      "description": "2 products or services (Invest and Spend)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 2,
+      "max_count": 2,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.7
+        }
+      ]
+    },
+    {
+      "id": "loan_spend",
+      "category": "loan",
+      "required_categories": [
+        "loan",
+        "spend"
+      ],
+      "label": "Loan",
+      "description": "2 products or services (Loan and Spend)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 2,
+      "max_count": 2,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.7
+        }
+      ]
+    },
+    {
+      "id": "bills_invest_insure",
+      "category": "bills",
+      "required_categories": [
+        "bills",
+        "invest",
+        "insure"
+      ],
+      "label": "GIRO",
+      "description": "3 products or services (GIRO, Invest and Insure)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 3,
+      "max_count": 99,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 2.75
+        }
+      ]
+    },
+    {
+      "id": "bills_invest_loan",
+      "category": "bills",
+      "required_categories": [
+        "bills",
+        "invest",
+        "loan"
+      ],
+      "label": "GIRO",
+      "description": "3 products or services (GIRO, Invest and Loan)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 3,
+      "max_count": 99,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 2.75
+        }
+      ]
+    },
+    {
+      "id": "bills_invest_spend",
+      "category": "bills",
+      "required_categories": [
+        "bills",
+        "invest",
+        "spend"
+      ],
+      "label": "GIRO",
+      "description": "3 products or services (GIRO, Invest and Spend)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 3,
+      "max_count": 99,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 2.75
+        }
+      ]
+    },
+    {
+      "id": "bills_insure_loan",
+      "category": "bills",
+      "required_categories": [
+        "bills",
+        "insure",
+        "loan"
+      ],
+      "label": "GIRO",
+      "description": "3 products or services (GIRO, Insure and Loan)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 3,
+      "max_count": 99,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 2.75
+        }
+      ]
+    },
+    {
+      "id": "bills_insure_spend",
+      "category": "bills",
+      "required_categories": [
+        "bills",
+        "insure",
+        "spend"
+      ],
+      "label": "GIRO",
+      "description": "3 products or services (GIRO, Insure and Spend)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 3,
+      "max_count": 99,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 2.75
+        }
+      ]
+    },
+    {
+      "id": "bills_loan_spend",
+      "category": "bills",
+      "required_categories": [
+        "bills",
+        "loan",
+        "spend"
+      ],
+      "label": "GIRO",
+      "description": "3 products or services (GIRO, Loan and Spend)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 3,
+      "max_count": 99,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 2.75
+        }
+      ]
+    },
+    {
+      "id": "salary_invest_insure",
+      "category": "salary",
+      "required_categories": [
+        "salary",
+        "invest",
+        "insure"
+      ],
+      "label": "Salary",
+      "description": "3 products or services (Salary, Invest and Insure)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 3,
+      "max_count": 99,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 2.75
+        }
+      ]
+    },
+    {
+      "id": "salary_invest_loan",
+      "category": "salary",
+      "required_categories": [
+        "salary",
+        "invest",
+        "loan"
+      ],
+      "label": "Salary",
+      "description": "3 products or services (Salary, Invest and Loan)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 3,
+      "max_count": 99,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 2.75
+        }
+      ]
+    },
+    {
+      "id": "salary_invest_spend",
+      "category": "salary",
+      "required_categories": [
+        "salary",
+        "invest",
+        "spend"
+      ],
+      "label": "Salary",
+      "description": "3 products or services (Salary, Invest and Spend)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 3,
+      "max_count": 99,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 2.75
+        }
+      ]
+    },
+    {
+      "id": "salary_insure_loan",
+      "category": "salary",
+      "required_categories": [
+        "salary",
+        "insure",
+        "loan"
+      ],
+      "label": "Salary",
+      "description": "3 products or services (Salary, Insure and Loan)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 3,
+      "max_count": 99,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 2.75
+        }
+      ]
+    },
+    {
+      "id": "salary_insure_spend",
+      "category": "salary",
+      "required_categories": [
+        "salary",
+        "insure",
+        "spend"
+      ],
+      "label": "Salary",
+      "description": "3 products or services (Salary, Insure and Spend)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 3,
+      "max_count": 99,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 2.75
+        }
+      ]
+    },
+    {
+      "id": "salary_loan_spend",
+      "category": "salary",
+      "required_categories": [
+        "salary",
+        "loan",
+        "spend"
+      ],
+      "label": "Salary",
+      "description": "3 products or services (Salary, Loan and Spend)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 3,
+      "max_count": 99,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 2.75
+        }
+      ]
+    },
+    {
+      "id": "insure_invest_loan",
+      "category": "insure",
+      "required_categories": [
+        "insure",
+        "invest",
+        "loan"
+      ],
+      "label": "Insure",
+      "description": "3 products or services (Insure, Invest and Loan)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 3,
+      "max_count": 99,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 2.75
+        }
+      ]
+    },
+    {
+      "id": "insure_invest_spend",
+      "category": "insure",
+      "required_categories": [
+        "insure",
+        "invest",
+        "spend"
+      ],
+      "label": "Insure",
+      "description": "3 products or services (Insure, Invest and Spend)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 3,
+      "max_count": 99,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 2.75
+        }
+      ]
+    },
+    {
+      "id": "invest_loan_spend",
+      "category": "invest",
+      "required_categories": [
+        "invest",
+        "loan",
+        "spend"
+      ],
+      "label": "Invest",
+      "description": "3 products or services (Invest, Loan and Spend)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 3,
+      "max_count": 99,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 2.75
+        }
+      ]
+    },
+    {
+      "id": "insure_loan_spend",
+      "category": "insure",
+      "required_categories": [
+        "insure",
+        "loan",
+        "spend"
+      ],
+      "label": "Insure",
+      "description": "3 products or services (Insure, Loan and Spend)",
+      "conditions": [],
+      "min_amount": 0.01,
+      "max_amount": 999999999.99,
+      "min_count": 3,
+      "max_count": 99,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 2.75
+        }
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "id": "salary",
+      "category": "salary",
+      "label": "Salary",
+      "description": "Salary Crediting via GIRO or Maybank Payroll",
+      "conditions": [
+        "Minimum salary amount of S$2,000 per month via interbank GIRO salary credit or Maybank Payroll."
+      ],
+      "min_amount": 2000,
+      "max_amount": 999999999.99,
+      "min_count": 0,
+      "max_count": 1,
+      "applicable_months": 999,
+      "replaceable_by": [
+        "giro"
+      ],
+      "interests": []
+    },
+    {
+      "id": "giro",
+      "category": "bills",
+      "label": "GIRO",
+      "description": "GIRO Payment to other billing organisations",
+      "conditions": [
+        "Minimum aggregate debit amount of S$300 per month.",
+        "Payments to Maybank, Etiqa Insurance Singapore and Kim Eng Securities are excluded."
+      ],
+      "min_amount": 300,
+      "max_amount": 999999999.99,
+      "min_count": 1,
+      "max_count": 99,
+      "applicable_months": 999,
+      "replaceable_by": [
+        "salary"
+      ],
+      "interests": []
+    },
+    {
+      "id": "spend",
+      "category": "spend",
+      "label": "Spend",
+      "description": "Transact with Maybank Platinum Visa Card and/or Horizon Visa Signature Card",
+      "conditions": [
+        "Spend at least S$500 in total across both Platinum Visa Card and/or Horizon Visa Signature Card."
+      ],
+      "min_amount": 500,
+      "max_amount": 999999999.99,
+      "min_count": 0,
+      "max_count": 1,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": []
+    },
+    {
+      "id": "insure",
+      "category": "insure",
+      "label": "Insure",
+      "description": "Regular Premium Insurance",
+      "conditions": [
+        "Minimum annual premium of S$5,000."
+      ],
+      "min_amount": 5000,
+      "max_amount": 999999999.99,
+      "min_count": 0,
+      "max_count": 1,
+      "applicable_months": 12,
+      "replaceable_by": [],
+      "interests": []
+    },
+    {
+      "id": "invest_unit_trusts",
+      "category": "invest",
+      "label": "Invest",
+      "description": "Unit Trust lump sum cash investment",
+      "conditions": [
+        "Minimum lump sum cash investment with a minimum of S$25,000 or equivalent."
+      ],
+      "min_amount": 25000,
+      "max_amount": 999999999.99,
+      "min_count": 0,
+      "max_count": 1,
+      "applicable_months": 12,
+      "replaceable_by": [
+        "invest_structured_deposits"
+      ],
+      "interests": []
+    },
+    {
+      "id": "invest_structured_deposits",
+      "category": "invest",
+      "label": "Invest",
+      "description": "Structured Deposits",
+      "conditions": [
+        "Minimum investment amount of S$30,000 or equivalent."
+      ],
+      "min_amount": 30000,
+      "max_amount": 999999999.99,
+      "min_count": 0,
+      "max_count": 1,
+      "applicable_months": 3,
+      "replaceable_by": [
+        "invest_unit_trusts"
+      ],
+      "interests": []
+    },
+    {
+      "id": "home_loan",
+      "category": "loan",
+      "label": "Home Loan",
+      "description": "Home Loan",
+      "conditions": [
+        "Except Equity Loan & Overseas Property Loan.",
+        "Minimum new loan amount of S$200,000 per loan account."
+      ],
+      "min_amount": 200000,
+      "max_amount": 999999999.99,
+      "min_count": 0,
+      "max_count": 1,
+      "applicable_months": 12,
+      "replaceable_by": [
+        "education_loan",
+        "renovation_loan",
+        "car_loan"
+      ],
+      "interests": []
+    },
+    {
+      "id": "education_loan",
+      "category": "loan",
+      "label": "Education Loan",
+      "description": "Education Loan",
+      "conditions": [
+        "Minimum new loan amount of S$10,000 per loan account."
+      ],
+      "min_amount": 10000,
+      "max_amount": 999999999.99,
+      "min_count": 0,
+      "max_count": 1,
+      "applicable_months": 12,
+      "replaceable_by": [
+        "home_loan",
+        "renovation_loan",
+        "car_loan"
+      ],
+      "interests": []
+    },
+    {
+      "id": "renovation_loan",
+      "category": "loan",
+      "label": "Renovation Loan",
+      "description": "Renovation Loan",
+      "conditions": [
+        "Minimum new loan amount of S$10,000 per loan account."
+      ],
+      "min_amount": 10000,
+      "max_amount": 999999999.99,
+      "min_count": 0,
+      "max_count": 1,
+      "applicable_months": 12,
+      "replaceable_by": [
+        "home_loan",
+        "education_loan",
+        "car_loan"
+      ],
+      "interests": []
+    },
+    {
+      "id": "car_loan",
+      "category": "loan",
+      "label": "Car Loan",
+      "description": "Car Loan",
+      "conditions": [
+        "Minimum new loan amount of S$35,000 per loan account."
+      ],
+      "min_amount": 35000,
+      "max_amount": 999999999.99,
+      "min_count": 0,
+      "max_count": 1,
+      "applicable_months": 12,
+      "replaceable_by": [
+        "home_loan",
+        "education_loan",
+        "renovation_loan"
+      ],
+      "interests": []
+    }
+  ]
+}
