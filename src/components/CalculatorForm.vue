@@ -34,6 +34,33 @@
           <v-row>
             <v-col
               cols="12"
+              md="12"
+            >
+
+              <v-chip-group
+                column
+                mandatory
+                multiple
+                v-model="form_data.banks_to_compare"
+              >
+
+                <v-chip
+                  v-for="bank in requirements"
+                  :key="bank.id"
+                  :value="bank.id"
+                  class="mx-2"
+                  filter
+                >
+                  {{ bank.name }}
+                </v-chip>
+
+              </v-chip-group>
+            </v-col>
+          </v-row>
+
+          <v-row>
+            <v-col
+              cols="12"
               md="4"
             >
               <v-text-field
@@ -455,6 +482,7 @@ export default {
     },
 
     form_data: {
+      banks_to_compare: [],
       starting_balance: null,
       salary: {
         amount: null,
@@ -507,6 +535,7 @@ export default {
         axios.get(source)
           .then(function (response) {
             vm.requirements.push(response.data);
+            vm.form_data.banks_to_compare = vm.requirements.map(bank => bank.id);
           })
           .catch(function (error) {
             vm.alert = error;
@@ -516,6 +545,7 @@ export default {
 
     formatFormData: function(data) {
       let starting_balance = parseFloat(data.starting_balance);
+      let banks_to_compare = data.banks_to_compare;
       let bonus_data = Object.assign({}, data, {
         grow: {
           amount: starting_balance,
@@ -523,8 +553,10 @@ export default {
         }
       });
       delete bonus_data.starting_balance;
+      delete bonus_data.banks_to_compare;
 
       return {
+        banks_to_compare: banks_to_compare,
         starting_balance: starting_balance,
         bonus_data: bonus_data
       };
@@ -552,11 +584,13 @@ export default {
       if (!vm.valid) { return; }
 
       let form_data = vm.formatFormData(vm.form_data);
+      let banks_to_compare = form_data.banks_to_compare;
       let starting_balance = form_data.starting_balance;
       let bonus_data = form_data.bonus_data;
 
-      vm.calculation.results = vm.requirements.map(bank => {
-        return vm.calculate_bank_total_interests(bank, starting_balance, bonus_data);
+      vm.calculation.results = banks_to_compare.map(bank => {
+        let requirement = vm.requirements.find(r => r.id === bank);
+        return vm.calculate_bank_total_interests(requirement, starting_balance, bonus_data);
       });
 
       vm.calculation.best_account = vm.highest_interests_bank(vm.calculation.results);
@@ -587,6 +621,7 @@ export default {
       };
 
       vm.form_data = {
+        banks_to_compare: vm.requirements.map(bank => bank.id),
         starting_balance: null,
         salary: {
           amount: null,
