@@ -906,9 +906,11 @@
       "conditions": [
         "Minimum salary amount of S$2,000 per month via interbank GIRO salary credit or Maybank Payroll."
       ],
+      "cumulative_min_amount": 2000,
+      "cumulative_max_amount": 999999999.99,
       "min_amount": 2000,
       "max_amount": 999999999.99,
-      "min_count": 0,
+      "min_count": 1,
       "max_count": 1,
       "applicable_months": 999,
       "replaceable_by": [
@@ -925,7 +927,9 @@
         "Minimum aggregate debit amount of S$300 per month.",
         "Payments to Maybank, Etiqa Insurance Singapore and Kim Eng Securities are excluded."
       ],
-      "min_amount": 300,
+      "cumulative_min_amount": 300,
+      "cumulative_max_amount": 999999999.99,
+      "min_amount": 0.01,
       "max_amount": 999999999.99,
       "min_count": 1,
       "max_count": 99,
@@ -943,9 +947,11 @@
       "conditions": [
         "Spend at least S$500 in total across both Platinum Visa Card and/or Horizon Visa Signature Card."
       ],
+      "cumulative_min_amount": 500,
+      "cumulative_max_amount": 999999999.99,
       "min_amount": 500,
       "max_amount": 999999999.99,
-      "min_count": 0,
+      "min_count": 1,
       "max_count": 1,
       "applicable_months": 999,
       "replaceable_by": [],
@@ -959,9 +965,11 @@
       "conditions": [
         "Minimum annual premium of S$5,000."
       ],
+      "cumulative_min_amount": 5000,
+      "cumulative_max_amount": 999999999.99,
       "min_amount": 5000,
       "max_amount": 999999999.99,
-      "min_count": 0,
+      "min_count": 1,
       "max_count": 1,
       "applicable_months": 12,
       "replaceable_by": [],
@@ -975,9 +983,11 @@
       "conditions": [
         "Minimum lump sum cash investment with a minimum of S$25,000 or equivalent."
       ],
+      "cumulative_min_amount": 25000,
+      "cumulative_max_amount": 999999999.99,
       "min_amount": 25000,
       "max_amount": 999999999.99,
-      "min_count": 0,
+      "min_count": 1,
       "max_count": 1,
       "applicable_months": 12,
       "replaceable_by": [
@@ -993,9 +1003,11 @@
       "conditions": [
         "Minimum investment amount of S$30,000 or equivalent."
       ],
+      "cumulative_min_amount": 30000,
+      "cumulative_max_amount": 999999999.99,
       "min_amount": 30000,
       "max_amount": 999999999.99,
-      "min_count": 0,
+      "min_count": 1,
       "max_count": 1,
       "applicable_months": 3,
       "replaceable_by": [
@@ -1012,9 +1024,11 @@
         "Except Equity Loan & Overseas Property Loan.",
         "Minimum new loan amount of S$200,000 per loan account."
       ],
+      "cumulative_min_amount": 200000,
+      "cumulative_max_amount": 999999999.99,
       "min_amount": 200000,
       "max_amount": 999999999.99,
-      "min_count": 0,
+      "min_count": 1,
       "max_count": 1,
       "applicable_months": 12,
       "replaceable_by": [
@@ -1032,9 +1046,11 @@
       "conditions": [
         "Minimum new loan amount of S$10,000 per loan account."
       ],
+      "cumulative_min_amount": 10000,
+      "cumulative_max_amount": 999999999.99,
       "min_amount": 10000,
       "max_amount": 999999999.99,
-      "min_count": 0,
+      "min_count": 1,
       "max_count": 1,
       "applicable_months": 12,
       "replaceable_by": [
@@ -1052,9 +1068,11 @@
       "conditions": [
         "Minimum new loan amount of S$10,000 per loan account."
       ],
+      "cumulative_min_amount": 10000,
+      "cumulative_max_amount": 999999999.99,
       "min_amount": 10000,
       "max_amount": 999999999.99,
-      "min_count": 0,
+      "min_count": 1,
       "max_count": 1,
       "applicable_months": 12,
       "replaceable_by": [
@@ -1072,9 +1090,11 @@
       "conditions": [
         "Minimum new loan amount of S$35,000 per loan account."
       ],
+      "cumulative_min_amount": 35000,
+      "cumulative_max_amount": 999999999.99,
       "min_amount": 35000,
       "max_amount": 999999999.99,
-      "min_count": 0,
+      "min_count": 1,
       "max_count": 1,
       "applicable_months": 12,
       "replaceable_by": [
