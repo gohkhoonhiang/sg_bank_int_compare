@@ -463,6 +463,8 @@
         "Credit your dividends into your DBS/POSB account, DBS Wealth Management Account, Supplementary Retirement Scheme (SRS) account or CPF Investment Account (CPFIA). Eligible dividends include Central Depository Pte Ltd (CDP), DBS Vickers Securities, DBS Online Equity Trading (OET), DBS Unit Trusts, DBS Online Funds Investing and DBS Invest-Saver. OR",
         "Connect and share financial information from your other banks and government accounts (CPF, HDB and IRAS) with SGFinDex and request for information retrieval of the linked accounts through DBS NAV Planner monthly."
       ],
+      "cumulative_min_amount": 0.01,
+      "cumulative_max_amount": 999999999.99,
       "min_amount": 0.01,
       "max_amount": 999999999.99,
       "min_count": 1,
@@ -480,9 +482,11 @@
         "Eligible credit card spend consists of retail and cash advance transactions posted within the calendar month. Reversals/credits/refunds posted will offset eligible credit card spend",
         "Eligible credit card spend across main cards & supplementary cards are accorded to the main cardholder"
       ],
+      "cumulative_min_amount": 0.01,
+      "cumulative_max_amount": 999999999.99,
       "min_amount": 0.01,
       "max_amount": 999999999.99,
-      "min_count": 0,
+      "min_count": 1,
       "max_count": 1,
       "applicable_months": 999,
       "replaceable_by": [],
@@ -497,9 +501,11 @@
         "Valid for new regular premium policy purchased after Multiplier Account is opened.",
         "The recognition of the monthly premium (i.e. Annualised premium/12) starts 1 month after policy inception and continues for 12 consecutive months as long as policy is in force."
       ],
+      "cumulative_min_amount": 0.01,
+      "cumulative_max_amount": 999999999.99,
       "min_amount": 0.01,
       "max_amount": 999999999.99,
-      "min_count": 0,
+      "min_count": 1,
       "max_count": 1,
       "applicable_months": 12,
       "replaceable_by": [
@@ -516,9 +522,11 @@
         "Valid for new single premium policy purchased with cash or DBS SRS Account after Multiplier Account is opened.",
         "The monthly premium amount will be calculated by dividing the single premium amount by 120. Recognition starts 1 month after policy inception and continues for 12 consecutive months as long as policy is in force."
       ],
+      "cumulative_min_amount": 0.01,
+      "cumulative_max_amount": 999999999.99,
       "min_amount": 0.01,
       "max_amount": 999999999.99,
-      "min_count": 0,
+      "min_count": 1,
       "max_count": 1,
       "applicable_months": 12,
       "replaceable_by": [
@@ -534,9 +542,11 @@
       "conditions": [
         "Valid for new Unit Trust lump-sum or Online Funds Investment purchased with cash, DBS CPFIA or DBS SRS Account after Multiplier Account is opened."
       ],
+      "cumulative_min_amount": 0.01,
+      "cumulative_max_amount": 999999999.99,
       "min_amount": 0.01,
       "max_amount": 999999999.99,
-      "min_count": 0,
+      "min_count": 1,
       "max_count": 1,
       "applicable_months": 999,
       "replaceable_by": [
@@ -556,9 +566,11 @@
         "Valid for new DBS Invest-Saver purchased after Multiplier Account is opened.",
         "The monthly investment amount will be recognised for the first 12 consecutive months per fund."
       ],
+      "cumulative_min_amount": 0.01,
+      "cumulative_max_amount": 999999999.99,
       "min_amount": 0.01,
       "max_amount": 999999999.99,
-      "min_count": 0,
+      "min_count": 1,
       "max_count": 1,
       "applicable_months": 12,
       "replaceable_by": [
@@ -578,9 +590,11 @@
         "Valid for 'BUY' equity trades with cash, CPF or SRS via DBS Vickers Online Trading or DBS Online Equity Trading after Multiplier Account is opened.",
         "The investment amount will be recognised post settlement date."
       ],
+      "cumulative_min_amount": 0.01,
+      "cumulative_max_amount": 999999999.99,
       "min_amount": 0.01,
       "max_amount": 999999999.99,
-      "min_count": 0,
+      "min_count": 1,
       "max_count": 1,
       "applicable_months": 999,
       "replaceable_by": [
@@ -601,9 +615,11 @@
         "Minimum qualifying amount is S$1,000.",
         "The investment amount will be recognised post settlement date. OR"
       ],
+      "cumulative_min_amount": 0.01,
+      "cumulative_max_amount": 999999999.99,
       "min_amount": 1000,
       "max_amount": 999999999.99,
-      "min_count": 0,
+      "min_count": 1,
       "max_count": 1,
       "applicable_months": 999,
       "replaceable_by": [
@@ -624,9 +640,11 @@
         "Eligible products include Bonds (excludes Singapore Savings Bonds and Singapore Government Securities), Structured Deposit, Currency Linked Investments and Structured Notes.",
         "The investment amount will be recognised post settlement date for Bonds and 2 days after trade date for Structured Products."
       ],
+      "cumulative_min_amount": 0.01,
+      "cumulative_max_amount": 999999999.99,
       "min_amount": 0.01,
       "max_amount": 999999999.99,
-      "min_count": 0,
+      "min_count": 1,
       "max_count": 1,
       "applicable_months": 999,
       "replaceable_by": [
@@ -647,9 +665,11 @@
         "The monthly instalment due (both cash and CPF included) on your DBS/POSB home loan(s) are included in the eligible transaction.",
         "The first 3 joint borrowers will be accorded the full monthly instalment amount due as eligible transaction(s)."
       ],
+      "cumulative_min_amount": 0.01,
+      "cumulative_max_amount": 999999999.99,
       "min_amount": 0.01,
       "max_amount": 999999999.99,
-      "min_count": 0,
+      "min_count": 1,
       "max_count": 1,
       "applicable_months": 999,
       "replaceable_by": [],
