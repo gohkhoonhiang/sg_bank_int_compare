@@ -14,28 +14,33 @@
 
         </v-container>
 
-        <v-snackbar
+        <v-dialog
           v-model="disclaimer"
-          timeout="-1"
-          min-width="1000"
-          color="red"
-          multi-line
-          centered
+          persistent
+          scrollable
         >
-          <p><strong>Disclaimer:</strong> This site does not provide financial advice nor does it endorse any of the financial institutions referenced. The interests calculation is only an approximation and may not be 100% accurate. Please always refer to the official website for calculation. Comparison for reference only and should not be used as the sole reason for making certain financial decisions. The owner of this site shall not be responsible for any financial loss of its users.</p>
-          <p>The interest rates are correct as of 2022-09-04.</p>
-
-          <template v-slot:action="{ attrs }">
-            <v-btn
-              color="black"
-              text
-              v-bind="attrs"
-              @click="disclaimer = false"
+          <v-card
+            color="red"
+          >
+            <v-card-text
+              class="pa-4"
             >
-              I understand
-            </v-btn>
-          </template>
-        </v-snackbar>
+              <p><strong>Disclaimer:</strong> This site does not provide financial advice nor does it endorse any of the financial institutions referenced. The interests calculation is only an approximation and may not be 100% accurate. Please always refer to the official website for calculation. Comparison for reference only and should not be used as the sole reason for making certain financial decisions. The owner of this site shall not be responsible for any financial loss of its users.</p>
+              <p>The interest rates are correct as of 2022-09-04.</p>
+            </v-card-text>
+
+            <v-card-actions>
+              <v-spacer></v-spacer>
+
+              <v-btn
+                text
+                @click="disclaimer = false"
+              >
+                I understand
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-dialog>
 
       </v-main>
 
@@ -49,10 +54,23 @@
           flat
           tile
           width="100%"
-          class="pa-1 teal lighten-1 white--text text-center"
+          class="pa-1 lighten-1 white--text text-center"
         >
+          <v-card-subtitle
+            class="teal py-1 text-h7"
+          >
+            <v-icon
+              x-small
+            >
+              mdi-monitor
+            </v-icon>
+            This site is best viewed on screen size bigger than 800x600.
+          </v-card-subtitle>
+
+          <v-divider></v-divider>
+
           <v-card-text
-            class="pa-1 white--text"
+            class="py-1 text-center white--text"
           >
             {{ new Date().getFullYear() }} — <strong>SG Bank Interests Compare</strong>
             <v-btn

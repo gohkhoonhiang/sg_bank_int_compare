@@ -4,6 +4,17 @@
     <v-card
       class="mx-auto pa-4 mb-4"
     >
+      <v-card-subtitle
+      >
+        <v-icon
+          slot="icon"
+          small
+        >
+          mdi-calculator
+        </v-icon>
+        Input the amount for each category to calculate the potential interests earned on your account.
+      </v-card-subtitle>
+
       <v-form
         ref="form"
         v-model="valid"
@@ -18,18 +29,6 @@
         >
           {{ alert }}
         </v-alert>
-
-        <v-banner
-          sticky
-        >
-          <v-icon
-            slot="icon"
-            size="36"
-          >
-            mdi-calculator
-          </v-icon>
-          Input the amount for each category to calculate the potential interests earned on your account.
-        </v-banner>
 
         <v-container>
           <v-row>
@@ -233,7 +232,7 @@
     <v-tabs
       v-model="result_tab"
       v-if="calculation.results.length > 0"
-      vertical
+      show-arrows
     >
       <v-tab
         v-for="result in calculation.results"
