@@ -22,9 +22,11 @@
         "Only salary credit through GIRO with the transaction description 'GIRO - SALARY' in your statements will qualify for this bonus.",
         "To set up your 360 Account as your salary crediting account, please inform your HR department of your new account number (you will only need to do it once)."
       ],
+      "cumulative_min_amount": 1800,
+      "cumulative_max_amount": 999999999.99,
       "min_amount": 1800,
       "max_amount": 999999999.99,
-      "min_count": 0,
+      "min_count": 1,
       "max_count": 1,
       "applicable_months": 999,
       "replaceable_by": [],
@@ -54,9 +56,11 @@
       "conditions": [
         "Increase your account's average daily balance in the current month by at least S$500 from the previous month's average daily balance."
       ],
+      "cumulative_min_amount": 500,
+      "cumulative_max_amount": 999999999.99,
       "min_amount": 500,
       "max_amount": 999999999.99,
-      "min_count": 0,
+      "min_count": 1,
       "max_count": 1,
       "applicable_months": 999,
       "replaceable_by": [],
@@ -86,9 +90,11 @@
       "conditions": [
         "Charge at least S$500 to your OCBC 365 Credit Card each month."
       ],
+      "cumulative_min_amount": 500,
+      "cumulative_max_amount": 999999999.99,
       "min_amount": 500,
       "max_amount": 999999999.99,
-      "min_count": 0,
+      "min_count": 1,
       "max_count": 1,
       "applicable_months": 999,
       "replaceable_by": [],
@@ -123,9 +129,11 @@
         "Purchases of the same financial product will be aggregated, if their effective date post free-look period or 14 days whichever is longer, falls in the same calendar month.",
         "This bonus interest is accorded for 12 months after the effective date of purchase, post the free look/cancellation period or 14 days, whichever is longer."
       ],
+      "cumulative_min_amount": 2000,
+      "cumulative_max_amount": 999999999.99,
       "min_amount": 2000,
       "max_amount": 999999999.99,
-      "min_count": 0,
+      "min_count": 1,
       "max_count": 1,
       "applicable_months": 12,
       "replaceable_by": [
@@ -163,9 +171,11 @@
         "Purchases of the same financial product will be aggregated, if their effective date post free-look period or 14 days whichever is longer, falls in the same calendar month.",
         "This bonus interest is accorded for 12 months after the effective date of purchase, post the free look/cancellation period or 14 days, whichever is longer."
       ],
+      "cumulative_min_amount": 4000,
+      "cumulative_max_amount": 999999999.99,
       "min_amount": 4000,
       "max_amount": 999999999.99,
-      "min_count": 0,
+      "min_count": 1,
       "max_count": 1,
       "applicable_months": 12,
       "replaceable_by": [
@@ -203,9 +213,11 @@
         "Purchases of the same financial product will be aggregated, if their effective date post free-look period or 14 days whichever is longer, falls in the same calendar month.",
         "This bonus interest is accorded for 12 months after the effective date of purchase, post the free look/cancellation period or 14 days, whichever is longer."
       ],
+      "cumulative_min_amount": 20000,
+      "cumulative_max_amount": 999999999.99,
       "min_amount": 20000,
       "max_amount": 999999999.99,
-      "min_count": 0,
+      "min_count": 1,
       "max_count": 1,
       "applicable_months": 12,
       "replaceable_by": [
@@ -242,9 +254,11 @@
         "Purchases of the same financial product will be aggregated, if their effective date post free-look period or 14 days whichever is longer, falls in the same calendar month.",
         "This bonus interest is accorded for 12 months after the effective date of purchase, post the free look/cancellation period or 14 days, whichever is longer."
       ],
+      "cumulative_min_amount": 2000,
+      "cumulative_max_amount": 999999999.99,
       "min_amount": 2000,
       "max_amount": 999999999.99,
-      "min_count": 0,
+      "min_count": 1,
       "max_count": 1,
       "applicable_months": 12,
       "replaceable_by": [
@@ -281,9 +295,11 @@
         "Purchases of the same financial product will be aggregated, if their effective date post free-look period or 14 days whichever is longer, falls in the same calendar month.",
         "This bonus interest is accorded for 12 months after the effective date of purchase, post the free look/cancellation period or 14 days, whichever is longer."
       ],
+      "cumulative_min_amount": 2000,
+      "cumulative_max_amount": 999999999.99,
       "min_amount": 2000,
       "max_amount": 999999999.99,
-      "min_count": 0,
+      "min_count": 1,
       "max_count": 1,
       "applicable_months": 12,
       "replaceable_by": [
@@ -320,9 +336,11 @@
         "Purchases of the same financial product will be aggregated, if their effective date post free-look period or 14 days whichever is longer, falls in the same calendar month.",
         "This bonus interest is accorded for 12 months after the effective date of purchase, post the free look/cancellation period or 14 days, whichever is longer."
       ],
+      "cumulative_min_amount": 2000,
+      "cumulative_max_amount": 999999999.99,
       "min_amount": 2000,
       "max_amount": 999999999.99,
-      "min_count": 0,
+      "min_count": 1,
       "max_count": 1,
       "applicable_months": 12,
       "replaceable_by": [
@@ -353,9 +371,11 @@
       "label": "Grow",
       "description": "Maintain an average daily balance of at least S$200,000.",
       "conditions": [],
+      "cumulative_min_amount": 200000,
+      "cumulative_max_amount": 999999999.99,
       "min_amount": 200000,
       "max_amount": 999999999.99,
-      "min_count": 0,
+      "min_count": 1,
       "max_count": 1,
       "applicable_months": 999,
       "replaceable_by": [],
