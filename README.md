@@ -2,7 +2,7 @@
 
 ## Support me!
 
-If you found this app useful, consider <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="gohkhoonhiang" data-color="#5F7FFF" data-emoji="☕"  data-font="Bree" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script> so I can continue to build more useful apps!
+If you found this app useful, consider <a href="https://www.buymeacoffee.com/gohkhoonhiang" target="_blank"><img src="https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/main/blue-button.png" alt="Buy me a coffee" height="41" width="174"></a> so I can continue to build more useful apps!
 
 ## For users
 
