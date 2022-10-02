@@ -26,7 +26,7 @@
               class="pa-4"
             >
               <p><strong>Disclaimer:</strong> This site does not provide financial advice nor does it endorse any of the financial institutions referenced. The interests calculation is only an approximation and may not be 100% accurate. Please always refer to the official website for calculation. Comparison for reference only and should not be used as the sole reason for making certain financial decisions. The owner of this site shall not be responsible for any financial loss of its users.</p>
-              <p>The interest rates are correct as of 2022-09-04.</p>
+              <p>The interest rates are correct as of 2022-10-02.</p>
             </v-card-text>
 
             <v-card-actions>
@@ -56,6 +56,20 @@
           width="100%"
           class="pa-1 lighten-1 white--text text-center"
         >
+          <v-card-subtitle
+            class="yellow py-1 text-h7 black--text"
+          >
+            <v-icon
+              x-small
+              light
+            >
+              mdi-coffee-outline
+            </v-icon>
+            If you found this app useful, consider <a href="https://www.buymeacoffee.com/gohkhoonhiang" target="_blank">buying me a coffee</a> so I can continue to build more useful apps!
+          </v-card-subtitle>
+
+          <v-divider></v-divider>
+
           <v-card-subtitle
             class="teal py-1 text-h7"
           >
