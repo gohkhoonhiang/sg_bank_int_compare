@@ -176,12 +176,12 @@
       "max_count": 1,
       "applicable_months": 999,
       "replaceable_by": [],
+      "on_incremental_balance": true,
       "interests": [
         {
           "min_balance": 0,
           "max_balance": 50000,
-          "rate_pa": 0.2,
-          "on_incremental_balance": true
+          "rate_pa": 0.2
         }
       ]
     },
