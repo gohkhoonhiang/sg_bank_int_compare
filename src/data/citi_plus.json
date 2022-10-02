@@ -1,0 +1,240 @@
+{
+  "id": "citi_plus",
+  "name": "Citi Plus",
+  "metadata": {
+    "individual_requirement": true,
+    "base_interests": [
+      {
+        "min_balance": 0,
+        "max_balance": 50000.00,
+        "rate_pa": 0.3
+      },
+      {
+        "min_balance": 50000.01,
+        "max_balance": 999999999.99,
+        "rate_pa": 0.01
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "spend",
+      "category": "spend",
+      "label": "Spend",
+      "description": "Treat yourself to 0.2% p.a. bonus interest when you spend at least S$500 monthly or more on eligible retail spend with your Citibank Debit Mastercard® and/or Citi Cash Back+ Mastercard®.",
+      "conditions": [
+        "Achieve an aggregate eligible retail spend of at least S$500 per calendar month^ ('Spend Mission') on eligible Citibank Debit Cards and/or Citi Cash Back+ Mastercard® as a main cardmember (collectively referred to as “Cards” and each, a 'Card')*.",
+        "Please refer to Bank Website on Excluded Debit Card Spends for full details.",
+        "To determine whether you have met the Spend Mission criteria on the Citi Cash Back+ Mastercard®, only eligible retail spend on the Citi Cash Back+ Mastercard® for the relevant calendar month will be taken into account.",
+        "The Bank will determine the eligible retail spend date on a Card by the date that the relevant spend/transaction is posted by the Bank to the Card account, which is typically a few days after the date that the cardholder authorized by the cardholder to be charged to the Card ('Transaction Date').",
+        "Bonus interest crediting commences two months after Posting Date."
+      ],
+      "cumulative_min_amount": 500,
+      "cumulative_max_amount": 999999999.99,
+      "min_amount": 500,
+      "max_amount": 999999999.99,
+      "min_count": 1,
+      "max_count": 1,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.2
+        }
+      ]
+    },
+    {
+      "id": "insure",
+      "category": "insure",
+      "label": "Insure",
+      "description": "Protect your financial future with a bonus 0.6% p.a. interest on your savings with a policy of minimum S$5,000 regular premium.",
+      "conditions": [
+        "Purchase a new regular premium insurance policy owned by the Primary Account Holder with an annualized premium of at least S$5,000 (“Insure Mission”).",
+        "Insurance policies purchased or paid for using Central Provident Fund Savings or under the Supplementary Retirement Scheme are excluded.",
+        "If the insurance policy is cancelled, the Bank reserves the right to reverse the amount of Bonus Interests posted to your account.",
+        "Bonus interest crediting commences two months after Issuance Date for 12 months."
+      ],
+      "cumulative_min_amount": 5000,
+      "cumulative_max_amount": 999999999.99,
+      "min_amount": 5000,
+      "max_amount": 999999999.99,
+      "min_count": 1,
+      "max_count": 1,
+      "applicable_months": 12,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.6
+        }
+      ]
+    },
+    {
+      "id": "invest_unit_trusts",
+      "category": "invest",
+      "label": "Invest",
+      "description": "Make 3 investments (unit trusts) of S$1,000 or more and get yourself additional 0.6% p.a. interest on your savings.",
+      "conditions": [
+        "Perform 3 eligible investment transactions in a calendar month ('Invest Mission'). Investment transactions must be settled within the calendar month.",
+        "Unit trust purchase of at least S$1,000, either through one-time purchase or Regular Savings Plan. Exclusions apply.",
+        "Bonus interest crediting commences two months after Settlement Date."
+      ],
+      "cumulative_min_amount": 3000,
+      "cumulative_max_amount": 999999999.99,
+      "min_amount": 1000,
+      "max_amount": 999999999.99,
+      "min_count": 3,
+      "max_count": 999,
+      "applicable_months": 999,
+      "replaceable_by": [
+        "invest_securities",
+        "invest_fx"
+      ],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.6
+        }
+      ]
+    },
+    {
+      "id": "invest_securities",
+      "category": "invest",
+      "label": "Invest",
+      "description": "Make 3 investments (securities) of S$5,000 or more and get yourself additional 0.6% p.a. interest on your savings.",
+      "conditions": [
+        "Perform 3 eligible investment transactions in a calendar month ('Invest Mission'). Investment transactions must be settled within the calendar month.",
+        "Buy order for securities listed on any stock exchange in the United States of America, Singapore and Hong Kong with minimum transaction value of S$5,000.",
+        "Bonus interest crediting commences two months after Settlement Date."
+      ],
+      "cumulative_min_amount": 15000,
+      "cumulative_max_amount": 999999999.99,
+      "min_amount": 5000,
+      "max_amount": 999999999.99,
+      "min_count": 3,
+      "max_count": 999,
+      "applicable_months": 999,
+      "replaceable_by": [
+        "invest_unit_trusts",
+        "invest_fx"
+      ],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.6
+        }
+      ]
+    },
+    {
+      "id": "invest_fx",
+      "category": "invest",
+      "label": "Invest",
+      "description": "Make 3 investments (foreign currency exchange) of S$1,000 or more and get yourself additional 0.6% p.a. interest on your savings.",
+      "conditions": [
+        "Perform 3 eligible investment transactions in a calendar month ('Invest Mission'). Investment transactions must be settled within the calendar month.",
+        "Foreign currency exchange ('FX') transactions that include currency conversion made between your own accounts (including joint accounts) and valued in the current calendar month.",
+        "Bonus interest crediting commences two months after Settlement Date."
+      ],
+      "cumulative_min_amount": 15000,
+      "cumulative_max_amount": 999999999.99,
+      "min_amount": 5000,
+      "max_amount": 999999999.99,
+      "min_count": 3,
+      "max_count": 999,
+      "applicable_months": 999,
+      "replaceable_by": [
+        "invest_unit_trusts",
+        "invest_fx"
+      ],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.6
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "category": "save",
+      "label": "Save",
+      "description": "Increase your balance by S$1,500 or more and be rewarded with 0.2% p.a. interest on incremental savings.",
+      "conditions": [
+        "Increase your account’s average daily balance from previous month’s average daily balance by at least S$1,500 ('Save Mission').",
+        "Bonus interest crediting commences two months after Saving Date."
+      ],
+      "cumulative_min_amount": 1500,
+      "cumulative_max_amount": 999999999.99,
+      "min_amount": 1500,
+      "max_amount": 999999999.99,
+      "min_count": 1,
+      "max_count": 1,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.2,
+          "on_incremental_balance": true
+        }
+      ]
+    },
+    {
+      "id": "home_loan",
+      "category": "loan",
+      "label": "Home Loan",
+      "description": "Take up a home loan of S$500,000 or more with Citi to unlock a sweet bonus of 0.8% p.a. interest on your savings.",
+      "conditions": [
+        "Sign up for a new home loan of at least S$500,000 ('Mortgage Mission').",
+        "Exclude Mortgage Loans with Interest Offset features; and Overdraft facilities.",
+        "Bonus interest crediting commences two months after Disbursement Date for 12 months."
+      ],
+      "cumulative_min_amount": 500000,
+      "cumulative_max_amount": 999999999.99,
+      "min_amount": 500000,
+      "max_amount": 999999999.99,
+      "min_count": 1,
+      "max_count": 1,
+      "applicable_months": 12,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.8
+        }
+      ]
+    },
+    {
+      "id": "birthday",
+      "category": "birthday",
+      "label": "Birthday",
+      "description": "Celebrate your birthday with an extra 0.1% p.a. birthday bonus interest, just for being you.",
+      "conditions": [
+        "Keep your account open through the entire period of your birthday month ('Birthday Mission').",
+        "Bonus interest crediting commences one month after Birthday Month."
+      ],
+      "cumulative_min_amount": 0,
+      "cumulative_max_amount": 999999999.99,
+      "min_amount": 0,
+      "max_amount": 999999999.99,
+      "min_count": 0,
+      "max_count": 1,
+      "applicable_months": 999,
+      "replaceable_by": [],
+      "interests": [
+        {
+          "min_balance": 0,
+          "max_balance": 50000,
+          "rate_pa": 0.1
+        }
+      ]
+    }
+  ]
+}
