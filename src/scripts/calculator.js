@@ -214,7 +214,17 @@ export default {
         }
 
         let potential_interests = satisfied_requirements.map(satisfied_requirement => {
-          let interests = this.calculate_tiered_interests(satisfied_requirement.interests, category, starting_balance);
+          let on_incremental_balance = !!satisfied_requirement.on_incremental_balance;
+          let interests = [];
+
+          if (on_incremental_balance) {
+            bonus_data[category].forEach(category_data => {
+              interests = interests.concat(this.calculate_tiered_interests(satisfied_requirement.interests, category, category_data.amount));
+            });
+          } else {
+            interests = this.calculate_tiered_interests(satisfied_requirement.interests, category, starting_balance);
+          }
+
           return this.calculate_category_total(interests, satisfied_requirement, starting_balance, category, category_amount);
         });
 

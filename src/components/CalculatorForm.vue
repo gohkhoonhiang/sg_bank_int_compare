@@ -158,24 +158,6 @@
               md="4"
             >
               <v-text-field
-                v-model="form_data.invest.amount"
-                label="Invest"
-                type="number"
-                :rules="rules.invest"
-                @keydown="validateNumericField"
-                prefix="S$"
-                hint="Eg. Unit trust investment, equities trade online"
-                persistent-hint
-                clearable
-              >
-              </v-text-field>
-            </v-col>
-
-            <v-col
-              cols="12"
-              md="4"
-            >
-              <v-text-field
                 v-model="form_data.loan.amount"
                 label="Loan"
                 type="number"
@@ -195,39 +177,108 @@
               cols="12"
               md="4"
             >
-              <v-btn
-                class="ma-1"
-                @click="addBill"
-              >
-                Add Bill
-              </v-btn>
-            </v-col>
-          </v-row>
+              <v-row>
+                <v-col
+                  cols="12"
+                  md="12"
+                >
+                  <v-btn
+                    class="ma-1"
+                    @click="addBill"
+                  >
+                    Add Bill
+                  </v-btn>
+                </v-col>
+              </v-row>
 
-          <v-row
-            v-for="(bill, index) in bills_data"
-            :key="index"
-          >
+              <v-row>
+                <v-col
+                  cols="12"
+                  md="12"
+                >
+                  <v-row
+                    v-for="(bill, index) in bills_data"
+                    :key="index"
+                  >
+                    <v-col
+                      cols="12"
+                      md="12"
+                    >
+                      <v-text-field
+                        v-model="bill.amount"
+                        label="Bills"
+                        type="number"
+                        :rules="rules.bills"
+                        @keydown="validateNumericField"
+                        prefix="S$"
+                        :hint="`Amount for bill ${index + 1}`"
+                        persistent-hint
+                        clearable
+                        append-outer-icon="mdi-delete"
+                        @click:append-outer="removeBill(bill)"
+                      >
+                      </v-text-field>
+                    </v-col>
+                  </v-row>
+
+                </v-col>
+              </v-row>
+            </v-col>
+
             <v-col
               cols="12"
               md="4"
             >
-              <v-text-field
-                v-model="bill.amount"
-                label="Bills"
-                type="number"
-                :rules="rules.bills"
-                @keydown="validateNumericField"
-                prefix="S$"
-                :hint="`Amount for bill ${index + 1}`"
-                persistent-hint
-                clearable
-                append-outer-icon="mdi-delete"
-                @click:append-outer="removeBill(bill)"
-              >
-              </v-text-field>
+              <v-row>
+                <v-col
+                  cols="12"
+                  md="12"
+                >
+                  <v-btn
+                    class="ma-1"
+                    @click="addInvest"
+                  >
+                    Add Investment
+                  </v-btn>
+                </v-col>
+              </v-row>
+
+              <v-row>
+                <v-col
+                  cols="12"
+                  md="12"
+                >
+                  <v-row
+                    v-for="(investment, index) in invests_data"
+                    :key="index"
+                  >
+                    <v-col
+                      cols="12"
+                      md="12"
+                    >
+                      <v-text-field
+                        v-model="investment.amount"
+                        label="Investments"
+                        type="number"
+                        :rules="rules.invests"
+                        @keydown="validateNumericField"
+                        prefix="S$"
+                        :hint="`Amount for investment ${index + 1}`"
+                        persistent-hint
+                        clearable
+                        append-outer-icon="mdi-delete"
+                        @click:append-outer="removeInvest(investment)"
+                      >
+                      </v-text-field>
+                    </v-col>
+                  </v-row>
+
+                </v-col>
+              </v-row>
             </v-col>
+
           </v-row>
+
         </v-container>
 
         <v-btn
@@ -294,7 +345,7 @@
               <template v-slot:header.eligible_amount="{ header }">
                 {{ header.text }}
                 <v-tooltip
-                  right
+                  top
                 >
                   <template v-slot:activator="{ on, attrs }">
                     <v-icon
@@ -314,7 +365,7 @@
               <template v-slot:item.category="{ item }">
                 {{ item.category }}
                 <v-tooltip
-                  right
+                  top
                   v-if="item.description"
                 >
                   <template v-slot:activator="{ on, attrs }">
@@ -393,7 +444,8 @@ const DATA_SOURCES = [
   'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/b425117e0a73377de70cce9e90fc7c3d2269a236/src/data/uob_one.json',
   'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/c2c28c98a85f87b6407acd164c2c050e0229626d/src/data/cimb_fast_saver.json',
   'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/0859e7a55c828505837c68e764a83a361b5d54c5/src/data/sc_bonus_saver.json',
-  'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/123777dd45f53bfb15eb9e6ed1a9c075e2f68dc9/src/data/maybank_saveup.json'
+  'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/123777dd45f53bfb15eb9e6ed1a9c075e2f68dc9/src/data/maybank_saveup.json',
+  'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/617f0c72b6b986f9af818726ffcc4d596c9f87db/src/data/citi_plus.json'
 ];
 
 export default {
@@ -485,6 +537,9 @@ export default {
     bills_data: [],
     bills_counter: 0,
 
+    invests_data: [],
+    invests_counter: 0,
+
     form_data: {
       banks_to_compare: [],
       starting_balance: null,
@@ -567,6 +622,26 @@ export default {
       vm.bills_data.splice(index, 1);
     },
 
+    addInvest: function() {
+      let vm = this;
+
+      vm.invests_counter = vm.invests_counter + 1;
+      vm.invests_data.push({
+        id: `invest-${vm.invests_counter}`,
+        amount: null
+      });
+    },
+
+    removeInvest: function(invest) {
+      let vm = this;
+
+      let index = vm.invests_data.findIndex(b => {
+        return b.id === invest.id;
+      });
+
+      vm.invests_data.splice(index, 1);
+    },
+
     formatFormData: function() {
       let vm = this;
 
@@ -591,9 +666,11 @@ export default {
         insure: [{
           amount: vm.form_data.insure.amount
         }],
-        invest: [{
-          amount: vm.form_data.invest.amount
-        }],
+        invest: vm.invests_data.map(invest => {
+          return {
+            amount: invest.amount
+          }
+        }),
         grow: [{
           amount: starting_balance
         }],
@@ -669,6 +746,9 @@ export default {
 
       vm.bills_data = [];
       vm.bills_counter = 0;
+      vm.invests_data = [];
+      vm.invests_counter = 0;
+
       vm.form_data = {
         banks_to_compare: vm.requirements.map(bank => bank.id),
         starting_balance: null,
