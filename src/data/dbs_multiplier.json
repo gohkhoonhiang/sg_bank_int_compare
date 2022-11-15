@@ -99,7 +99,7 @@
       "interests": [
         {
           "min_balance": 0,
-          "max_balance": 25000,
+          "max_balance": 50000,
           "rate_pa": 0.85
         }
       ]
@@ -122,8 +122,8 @@
       "interests": [
         {
           "min_balance": 0,
-          "max_balance": 50000,
-          "rate_pa": 1.15
+          "max_balance": 100000,
+          "rate_pa": 1.65
         }
       ]
     },
@@ -145,11 +145,6 @@
       "interests": [
         {
           "min_balance": 0,
-          "max_balance": 50000,
-          "rate_pa": 1.15
-        },
-        {
-          "min_balance": 50000.01,
           "max_balance": 100000,
           "rate_pa": 1.95
         }
@@ -173,8 +168,8 @@
       "interests": [
         {
           "min_balance": 0,
-          "max_balance": 25000,
-          "rate_pa": 0.95
+          "max_balance": 50000,
+          "rate_pa": 1.45
         }
       ]
     },
@@ -196,8 +191,8 @@
       "interests": [
         {
           "min_balance": 0,
-          "max_balance": 50000,
-          "rate_pa": 1.25
+          "max_balance": 100000,
+          "rate_pa": 1.75
         }
       ]
     },
@@ -219,11 +214,6 @@
       "interests": [
         {
           "min_balance": 0,
-          "max_balance": 50000,
-          "rate_pa": 1.25
-        },
-        {
-          "min_balance": 50000.01,
           "max_balance": 100000,
           "rate_pa": 2.15
         }
@@ -247,8 +237,8 @@
       "interests": [
         {
           "min_balance": 0,
-          "max_balance": 25000,
-          "rate_pa": 0.95
+          "max_balance": 50000,
+          "rate_pa": 1.75
         }
       ]
     },
@@ -270,8 +260,8 @@
       "interests": [
         {
           "min_balance": 0,
-          "max_balance": 50000,
-          "rate_pa": 1.35
+          "max_balance": 100000,
+          "rate_pa": 2.05
         }
       ]
     },
@@ -293,11 +283,6 @@
       "interests": [
         {
           "min_balance": 0,
-          "max_balance": 50000,
-          "rate_pa": 1.35
-        },
-        {
-          "min_balance": 50000.01,
           "max_balance": 100000,
           "rate_pa": 2.35
         }
@@ -321,8 +306,8 @@
       "interests": [
         {
           "min_balance": 0,
-          "max_balance": 25000,
-          "rate_pa": 0.95
+          "max_balance": 50000,
+          "rate_pa": 1.85
         }
       ]
     },
@@ -344,8 +329,8 @@
       "interests": [
         {
           "min_balance": 0,
-          "max_balance": 50000,
-          "rate_pa": 1.45
+          "max_balance": 100000,
+          "rate_pa": 2.15
         }
       ]
     },
@@ -367,11 +352,6 @@
       "interests": [
         {
           "min_balance": 0,
-          "max_balance": 50000,
-          "rate_pa": 1.45
-        },
-        {
-          "min_balance": 50000.01,
           "max_balance": 100000,
           "rate_pa": 2.45
         }
@@ -395,8 +375,8 @@
       "interests": [
         {
           "min_balance": 0,
-          "max_balance": 25000,
-          "rate_pa": 1.05
+          "max_balance": 50000,
+          "rate_pa": 2.15
         }
       ]
     },
@@ -418,8 +398,8 @@
       "interests": [
         {
           "min_balance": 0,
-          "max_balance": 50000,
-          "rate_pa": 2.45
+          "max_balance": 100000,
+          "rate_pa": 2.95
         }
       ]
     },
@@ -441,13 +421,8 @@
       "interests": [
         {
           "min_balance": 0,
-          "max_balance": 50000,
-          "rate_pa": 2.45
-        },
-        {
-          "min_balance": 50000.01,
           "max_balance": 100000,
-          "rate_pa": 3.45
+          "rate_pa": 4.05
         }
       ]
     }
