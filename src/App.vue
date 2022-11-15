@@ -26,7 +26,7 @@
               class="pa-4"
             >
               <p><strong>Disclaimer:</strong> This site does not provide financial advice nor does it endorse any of the financial institutions referenced. The interests calculation is only an approximation and may not be 100% accurate. Please always refer to the official website for calculation. Comparison for reference only and should not be used as the sole reason for making certain financial decisions. The owner of this site shall not be responsible for any financial loss of its users.</p>
-              <p>The interest rates are correct as of 2022-10-02.</p>
+              <p>The interest rates are correct as of 2022-11-01.</p>
             </v-card-text>
 
             <v-card-actions>
