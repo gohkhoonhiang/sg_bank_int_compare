@@ -442,7 +442,7 @@ const DATA_SOURCES = [
   'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/30b8d5fb057c15f639b8a9921fb57efac729edc7/src/data/ocbc_360.json',
   'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/f271030fe25c980d7e89367f46288dc9556367e4/src/data/dbs_multiplier.json',
   'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/b425117e0a73377de70cce9e90fc7c3d2269a236/src/data/uob_one.json',
-  'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/c2c28c98a85f87b6407acd164c2c050e0229626d/src/data/cimb_fast_saver.json',
+  'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/a3f1971da6fe7952fac9f2855569201fe9c6fa97/src/data/cimb_fast_saver.json',
   'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/0859e7a55c828505837c68e764a83a361b5d54c5/src/data/sc_bonus_saver.json',
   'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/123777dd45f53bfb15eb9e6ed1a9c075e2f68dc9/src/data/maybank_saveup.json',
   'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/617f0c72b6b986f9af818726ffcc4d596c9f87db/src/data/citi_plus.json'
