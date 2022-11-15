@@ -439,7 +439,7 @@ import calculator from '../scripts/calculator';
 const axios = require('axios').default;
 
 const DATA_SOURCES = [
-  'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/a810e500cce51fd52323c31350e6a80695b3f231/src/data/ocbc_360.json',
+  'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/30b8d5fb057c15f639b8a9921fb57efac729edc7/src/data/ocbc_360.json',
   'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/f271030fe25c980d7e89367f46288dc9556367e4/src/data/dbs_multiplier.json',
   'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/b425117e0a73377de70cce9e90fc7c3d2269a236/src/data/uob_one.json',
   'https://raw.githubusercontent.com/gohkhoonhiang/sg_bank_int_compare/c2c28c98a85f87b6407acd164c2c050e0229626d/src/data/cimb_fast_saver.json',
