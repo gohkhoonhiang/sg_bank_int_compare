@@ -6,7 +6,7 @@ If you found this app useful, consider <a href="https://www.buymeacoffee.com/goh
 
 ## For users
 
-The app data are accurate as of 2 October 2022. Currently supported for comparison:
+The app data are accurate as of 1 November 2022. Currently supported for comparison:
 
 - CIMB Fast Saver
 - Citi Plus
