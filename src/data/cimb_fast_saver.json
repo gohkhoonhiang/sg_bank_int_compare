@@ -7,22 +7,22 @@
       {
         "min_balance": 0,
         "max_balance": 10000,
-        "rate_pa": 1.1
+        "rate_pa": 1.5
       },
       {
         "min_balance": 10000.01,
         "max_balance": 25000,
-        "rate_pa": 1.1
+        "rate_pa": 1.5
       },
       {
         "min_balance": 25000.01,
         "max_balance": 50000,
-        "rate_pa": 1.5
+        "rate_pa": 2.5
       },
       {
         "min_balance": 50000.01,
         "max_balance": 75000,
-        "rate_pa": 2.0
+        "rate_pa": 3.5
       },
       {
         "min_balance": 75000.01,
